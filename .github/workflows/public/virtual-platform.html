@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KIT Services — Virtual Platform. Your secure operator terminal on the grid." />
+  <title>Virtual Platform — KIT Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/platform.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="bg-aurora" aria-hidden="true"></div>
+
+  <header class="nav platform-nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">K</span>
+      <span class="brand-name">KIT<span class="brand-sub">SERVICES</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#modules">Modules</a>
+      <a href="#console">Console</a>
+      <a href="#identity">Identity</a>
+      <button id="logoutBtn" class="btn btn-red nav-logout" type="button">Disconnect</button>
+    </nav>
+  </header>
+
+  <main class="platform">
+    <!-- ============ HEAD ============ -->
+    <header class="platform-head">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> GRID TERMINAL — CHANNEL OPEN</p>
+      <h1 class="platform-title">Virtual <span class="accent-blue">Platform</span></h1>
+      <p class="platform-sub">Operator terminal for the KIT grid. Connected as <span id="identityEmail" class="accent-blue">…</span></p>
+      <span class="neon-rule"></span>
+    </header>
+
+    <!-- ============ GRID ============ -->
+    <div class="platform-grid">
+      <!-- identity -->
+      <aside class="panel identity-card" id="identity">
+        <div class="identity-avatar">K</div>
+        <p class="eyebrow">// OPERATOR IDENTITY</p>
+        <h2 class="identity-name" id="identityName">—</h2>
+        <ul class="identity-meta">
+          <li><span>Handle</span><b id="identityHandle">—</b></li>
+          <li><span>Status</span><b class="online"><span class="badge-pulse"></span> Authenticated</b></li>
+          <li><span>Clearance</span><b>Level 03 · Trusted</b></li>
+        </ul>
+        <div class="identity-grid-chip">
+          <span>GRID REGISTER</span>
+          <strong id="memberCount">--</strong>
+        </div>
+      </aside>
+
+      <!-- main columns -->
+      <section class="platform-main">
+        <!-- module status -->
+        <div class="status-grid" id="modules">
+          <article class="panel status-card s-online">
+            <header><h3>Managed IT</h3><span class="status-pill online">ONLINE</span></header>
+            <p class="stat-lat">Latency <b>12ms</b></p>
+            <div class="uptime"><i style="width:98%"></i></div>
+          </article>
+          <article class="panel status-card s-online">
+            <header><h3>Cyber Defense</h3><span class="status-pill online">ONLINE</span></header>
+            <p class="stat-lat">Latency <b>8ms</b></p>
+            <div class="uptime"><i style="width:100%"></i></div>
+          </article>
+          <article class="panel status-card s-online">
+            <header><h3>Cloud Routing</h3><span class="status-pill online">ONLINE</span></header>
+            <p class="stat-lat">Latency <b>21ms</b></p>
+            <div class="uptime"><i style="width:92%"></i></div>
+          </article>
+          <article class="panel status-card s-online">
+            <header><h3>Grid Networking</h3><span class="status-pill online">ONLINE</span></header>
+            <p class="stat-lat">Latency <b>15ms</b></p>
+            <div class="uptime"><i style="width:99%"></i></div>
+          </article>
+          <article class="panel status-card s-idle">
+            <header><h3>Data Vault</h3><span class="status-pill idle">STANDBY</span></header>
+            <p class="stat-lat">Latency <b>34ms</b></p>
+            <div class="uptime"><i style="width:76%"></i></div>
+          </article>
+          <article class="panel status-card s-idle">
+            <header><h3>24/7 Support</h3><span class="status-pill idle">WATCHING</span></header>
+            <p class="stat-lat">Queue <b>0</b></p>
+            <div class="uptime"><i style="width:88%"></i></div>
+          </article>
+        </div>
+
+        <!-- console + feed -->
+        <div class="low-row">
+          <section class="panel console-panel" id="console">
+            <header class="console-head">
+              <h3>GRID CONSOLE</h3>
+              <div class="leds"><i></i><i></i><i></i></div>
+            </header>
+            <pre class="console-out" id="consoleOut"></pre>
+          </section>
+
+          <section class="panel feed-panel" >
+            <header class="console-head">
+              <h3>GRID ACTIVITY</h3>
+              <span class="status-pill online">LIVE</span>
+            </header>
+            <ul class="feed" id="feed"></ul>
+          </section>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <span class="brand-mark">K</span>
+      <span>KIT SERVICES</span>
+    </div>
+    <p>© <span id="year"></span> KIT Services — Authorized operators only. All sessions encrypted.</p>
+    <p class="footer-cli">NODE: <span class="accent-blue">virt-platform.grid/01</span> · STATUS: <span class="accent-blue">SECURE</span></p>
+  </footer>
+
+  <script src="/js/platform.js"></script>
+</body>
+</html>
